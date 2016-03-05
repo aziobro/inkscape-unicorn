@@ -28,11 +28,11 @@ class MyEffect(inkex.Effect):
     inkex.Effect.__init__(self)
     self.OptionParser.add_option("--pen-up-angle",
                       action="store", type="float",
-                      dest="pen_up_angle", default="50.0",
+                      dest="pen_up_angle", default="40.0",
                       help="Pen Up Angle")
     self.OptionParser.add_option("--pen-down-angle",
                       action="store", type="float",
-                      dest="pen_down_angle", default="30.0",
+                      dest="pen_down_angle", default="20.0",
                       help="Pen Down Angle")
     self.OptionParser.add_option("--start-delay",
                       action="store", type="float",
@@ -44,7 +44,7 @@ class MyEffect(inkex.Effect):
                       help="Delay after pen up command before movement in milliseconds")
     self.OptionParser.add_option("--xy-feedrate",
                       action="store", type="float",
-                      dest="xy_feedrate", default="3500.0",
+                      dest="xy_feedrate", default="35000.0",
                       help="XY axes feedrate in mm/min")
     self.OptionParser.add_option("--z-feedrate",
                       action="store", type="float",
@@ -60,7 +60,7 @@ class MyEffect(inkex.Effect):
                       help="Z axis height after printing in mm")
     self.OptionParser.add_option("--register-pen",
                       action="store", type="string",
-                      dest="register_pen", default="true",
+                      dest="register_pen", default="false",
                       help="Add pen registration check(s)")
     self.OptionParser.add_option("--x-home",
                       action="store", type="float",
@@ -68,7 +68,7 @@ class MyEffect(inkex.Effect):
                       help="Starting X position")
     self.OptionParser.add_option("--y-home",
                       action="store", type="float",
-                      dest="y_home", default="0.0",
+                      dest="y_home", default="-448.0",
                       help="Starting Y position")
     self.OptionParser.add_option("--num-copies",
                       action="store", type="int",
